@@ -1,3 +1,5 @@
+"use client";
+
 import { getWhatsAppLink } from "@/lib/utils";
 
 /**
