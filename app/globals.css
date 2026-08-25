@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --color-black: #080808;
+  --color-black-soft: #151515;
+  --color-red: #d20a0a;
+  --color-red-bright: #ff1e1e;
+  --color-white: #ffffff;
+  --color-gray: #b8b8b8;
+}
+
+@theme inline {
+  /* Cores da marca */
+  --color-brand-black: var(--color-black);
+  --color-brand-black-soft: var(--color-black-soft);
+  --color-brand-red: var(--color-red);
+  --color-brand-red-bright: var(--color-red-bright);
+  --color-brand-white: var(--color-white);
+  --color-brand-gray: var(--color-gray);
+
+  /* Tipografia */
+  --font-display: var(--font-oswald);
+  --font-sans: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Elemento de assinatura: corte diagonal (referência ao corte de película) */
+.diagonal-cut-b {
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+}
+
+.diagonal-cut-t {
+  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+}
+
+.film-edge {
+  position: relative;
+}
+
+.film-edge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-red) 15%,
+    var(--color-red-bright) 50%,
+    var(--color-red) 85%,
+    transparent 100%
+  );
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-black-soft);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
