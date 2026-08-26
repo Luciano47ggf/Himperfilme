@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
+import BeforeAfter from "@/components/BeforeAfter";
+import Gallery from "@/components/Gallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -14,7 +16,9 @@ export default function Home() {
         <Benefits />
         <Services />
         <Differentials />
-        {/* Próximas seções (Fase 4): Antes/Depois, Galeria */}
+        <BeforeAfter />
+        <Gallery />
+        {/* Próximas seções (Fase 5): Sobre, Depoimentos, CTA final, Localização, Footer */}
       </main>
       <WhatsAppButton />
     </>
