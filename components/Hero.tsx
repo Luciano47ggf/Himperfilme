@@ -40,6 +40,44 @@ export default function Hero() {
               "repeating-linear-gradient(115deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 120px)",
           }}
         />
+
+        {/* Silhueta de carro — elemento decorativo discreto, não é foto real */}
+        <div
+          className="absolute inset-y-0 right-0 hidden w-full opacity-[0.09] sm:block sm:w-[75%] lg:w-[62%]"
+          style={{
+            maskImage:
+              "radial-gradient(ellipse 75% 85% at 78% 62%, black 35%, transparent 82%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 75% 85% at 78% 62%, black 35%, transparent 82%)",
+          }}
+        >
+          {/* Glow no chão, atrás do carro */}
+          <div
+            className="absolute bottom-[18%] right-[5%] h-24 w-[55%] rounded-full opacity-70"
+            style={{
+              background: "var(--color-red)",
+              filter: "blur(60px)",
+            }}
+          />
+          <svg
+            viewBox="0 0 900 320"
+            className="absolute bottom-[16%] right-[-8%] w-[130%] max-w-none sm:w-[105%]"
+            aria-hidden="true"
+          >
+            <path
+              fill="var(--color-red)"
+              d="M 48 228 C 48 216 60 208 78 207 L 100 206 C 106 194 116 185 130 180 C 152 172 178 159 202 145 C 227 128 252 108 282 98 C 322 88 366 84 411 84 C 446 84 476 88 501 96 C 516 101 523 108 523 118 L 523 130 C 546 138 576 148 611 155 C 671 168 731 178 779 190 C 803 196 820 203 828 212 C 833 218 830 226 819 230 C 802 236 780 234 764 226 C 762 208 745 195 725 195 C 703 195 686 213 686 235 L 276 235 C 276 210 256 190 230 190 C 204 190 184 210 182 235 L 90 233 C 68 233 50 231 48 228 Z"
+            />
+            <path
+              fill="var(--color-black)"
+              d="M 210 143 C 234 127 258 110 285 101 C 322 91 364 87 408 87 C 441 87 469 91 492 98 C 503 102 508 107 507 113 L 500 122 C 470 116 438 114 408 114 C 372 114 337 118 305 128 C 280 136 252 145 226 154 C 219 150 213 147 210 143 Z"
+            />
+            <circle cx="228" cy="235" r="40" fill="var(--color-black-soft)" stroke="var(--color-red)" strokeWidth="4" />
+            <circle cx="228" cy="235" r="15" fill="var(--color-red)" />
+            <circle cx="722" cy="235" r="40" fill="var(--color-black-soft)" stroke="var(--color-red)" strokeWidth="4" />
+            <circle cx="722" cy="235" r="15" fill="var(--color-red)" />
+          </svg>
+        </div>
       </div>
 
       {/* Overlay escuro para garantir leitura do texto (quando houver foto) */}

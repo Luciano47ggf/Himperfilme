@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Camera, X, ChevronLeft, ChevronRight, AtSign } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import { siteConfig } from "@/data/site";
 
 /**
  * IMAGENS (pendente):
@@ -72,6 +73,23 @@ export default function Gallery() {
               </div>
             </button>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href={siteConfig.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 rounded-sm border border-brand-red/40 bg-brand-red/10 px-6 py-4 transition-colors hover:border-brand-red hover:bg-brand-red/20"
+          >
+            <AtSign size={22} className="text-brand-red-bright" />
+            <span className="font-sans text-sm text-brand-white">
+              Veja mais trabalhos no Instagram{" "}
+              <span className="font-semibold text-brand-red-bright group-hover:underline">
+                {siteConfig.instagramHandle}
+              </span>
+            </span>
+          </a>
         </div>
       </div>
 

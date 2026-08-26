@@ -39,7 +39,7 @@ export default function Footer() {
             href={siteConfig.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 font-sans text-sm text-brand-gray transition-colors hover:text-brand-white"
+            className="flex items-center gap-2 rounded-full border border-brand-red/50 bg-brand-red/10 px-4 py-2 font-sans text-sm font-semibold text-brand-red-bright transition-colors hover:border-brand-red hover:bg-brand-red/20"
           >
             <AtSign size={16} />
             {siteConfig.instagramHandle}

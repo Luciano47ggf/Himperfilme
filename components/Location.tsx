@@ -43,6 +43,21 @@ export default function Location() {
           <Navigation size={18} />
           Ver no Google Maps
         </a>
+
+        <div className="mt-8 overflow-hidden rounded-sm border border-white/10">
+          <iframe
+            src={`https://www.google.com/maps?q=${encodeURIComponent(
+              siteConfig.address
+            )}&output=embed`}
+            width="100%"
+            height="380"
+            style={{ border: 0, filter: "grayscale(1) invert(0.92) contrast(0.9)" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title={`Mapa de localização — ${siteConfig.name}`}
+            className="block"
+          />
+        </div>
       </div>
     </section>
   );
