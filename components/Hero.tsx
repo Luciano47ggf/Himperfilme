@@ -1,5 +1,3 @@
-"use client";
-
 import { getWhatsAppLink } from "@/lib/utils";
 
 /**
@@ -16,7 +14,7 @@ export default function Hero() {
       id="inicio"
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-brand-black pt-16 sm:pt-20"
     >
-      {/* Fundo: gradiente + textura */}
+      {/* Fundo: gradiente + textura (substituir por foto real quando disponível) */}
       <div className="absolute inset-0">
         {/*
         <Image
@@ -27,7 +25,6 @@ export default function Hero() {
           className="object-cover"
         />
         */}
-
         <div
           className="absolute inset-0"
           style={{
@@ -35,8 +32,7 @@ export default function Hero() {
               "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(210,10,10,0.16) 0%, transparent 60%), linear-gradient(180deg, #0c0c0c 0%, #080808 55%, #050505 100%)",
           }}
         />
-
-        {/* Linhas diagonais discretas */}
+        {/* Linhas diagonais discretas — remetem a reflexos de vidro/película */}
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{
@@ -46,7 +42,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Overlay escuro */}
+      {/* Overlay escuro para garantir leitura do texto (quando houver foto) */}
       <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/40" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
@@ -74,16 +70,13 @@ export default function Hero() {
             >
               Solicitar orçamento
             </a>
-
             <a
               href="#servicos"
               onClick={(e) => {
                 e.preventDefault();
-
-                document.querySelector("#servicos")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
+                document
+                  .querySelector("#servicos")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               className="inline-flex items-center justify-center rounded-sm border border-white/15 px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:border-white/40"
             >
@@ -93,8 +86,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Assinatura visual */}
-      <div className="diagonal-cut-t absolute inset-x-0 bottom-0 h-10 bg-brand-black sm:h-16" />
+      {/* Assinatura visual: corte diagonal na base da seção */}
+      <div className="absolute inset-x-0 bottom-0 h-10 bg-brand-black diagonal-cut-t sm:h-16" />
     </section>
   );
 }
