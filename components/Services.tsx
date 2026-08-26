@@ -1,4 +1,4 @@
-import { Car, Flame, Star, Shield, Eraser, RefreshCw } from "lucide-react";
+import { Car, Flame, Star, Shield, Eraser, RefreshCw, Home } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { getWhatsAppLink } from "@/lib/utils";
 
@@ -32,6 +32,11 @@ const SERVICES = [
     icon: RefreshCw,
     title: "Substituição de película",
     description: "Remoção e instalação de nova película.",
+  },
+  {
+    icon: Home,
+    title: "Insulfilm residencial",
+    description: "Aplicação de insulfilm em janelas e vidros residenciais.",
   },
 ];
 

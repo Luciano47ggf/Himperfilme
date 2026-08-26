@@ -5,6 +5,11 @@ import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
 import BeforeAfter from "@/components/BeforeAfter";
 import Gallery from "@/components/Gallery";
+import About from "@/components/About";
+import Testimonials from "@/components/Testimonials";
+import ContactCTA from "@/components/ContactCTA";
+import Location from "@/components/Location";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
@@ -18,8 +23,12 @@ export default function Home() {
         <Differentials />
         <BeforeAfter />
         <Gallery />
-        {/* Próximas seções (Fase 5): Sobre, Depoimentos, CTA final, Localização, Footer */}
+        <About />
+        <Testimonials />
+        <ContactCTA />
+        <Location />
       </main>
+      <Footer />
       <WhatsAppButton />
     </>
   );

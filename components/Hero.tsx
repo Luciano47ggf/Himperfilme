@@ -1,5 +1,3 @@
-"use client";
-
 import { getWhatsAppLink } from "@/lib/utils";
 
 /**
@@ -50,7 +48,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="max-w-2xl">
           <p className="film-edge inline-block pt-4 font-display text-xs font-semibold uppercase tracking-[0.35em] text-brand-red-bright sm:text-sm">
-            Especialista em Películas Automotivas
+            Insulfilm Automotivo e Residencial
           </p>
 
           <h1 className="mt-6 font-display text-4xl font-semibold uppercase leading-[1.05] tracking-tight text-brand-white sm:text-6xl lg:text-7xl">
@@ -74,12 +72,6 @@ export default function Hero() {
             </a>
             <a
               href="#servicos"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#servicos")
-                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
               className="inline-flex items-center justify-center rounded-sm border border-white/15 px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:border-white/40"
             >
               Conhecer serviços

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { getWhatsAppLink } from "@/lib/utils";
@@ -53,9 +54,16 @@ export default function Header() {
             e.preventDefault();
             handleNavClick("#inicio");
           }}
-          className="font-display text-xl font-semibold uppercase tracking-wide text-brand-white sm:text-2xl"
+          aria-label={siteConfig.name}
         >
-          {siteConfig.name}
+          <Image
+            src="/images/logo.png"
+            alt={siteConfig.name}
+            width={143}
+            height={41}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
         </a>
 
         {/* Nav desktop */}

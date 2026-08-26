@@ -10,34 +10,38 @@
 
 export const siteConfig = {
   name: "Himperfilme",
-  tagline: "Especialista em Películas Automotivas",
+  fullName: "Himperfilme - Insulfilm Automotivo e Residencial",
+  tagline: "Especialista em Insulfilm Automotivo e Residencial",
 
-  // Número no formato internacional, somente dígitos (ex: 5565999999999)
-  // PLACEHOLDER — substituir pelo número real antes de publicar.
-  whatsapp: "5565999999999",
+  // Número no formato internacional, somente dígitos
+  whatsapp: "5565984092913",
+  whatsappDisplay: "(65) 98409-2913",
 
   whatsappMessage:
     "Olá! Vi o site da Himperfilme e gostaria de solicitar um orçamento para instalação de película no meu veículo.",
 
-  instagram: "https://instagram.com/himperfilme", // PLACEHOLDER
-  instagramHandle: "@himperfilme", // PLACEHOLDER
+  instagram: "https://instagram.com/himperfilme",
+  instagramHandle: "@himperfilme",
 
-  // PLACEHOLDER — dados de localização ainda não confirmados
-  city: "[CIDADE / REGIÃO]",
-  region: "Atendimento em [CIDADE / REGIÃO]",
-  address: "", // deixar vazio até existir loja física confirmada
-  workingHours: "[HORÁRIO DE ATENDIMENTO]",
-  googleMapsUrl: "", // PLACEHOLDER
+  city: "Cuiabá - MT",
+  region: "Atendimento em Cuiabá e região",
+  address: "R. Joaquim Murtinho, 1335 - Centro Sul, Cuiabá - MT, 78020-290",
+  workingHours: "[HORÁRIO DE ATENDIMENTO]", // PLACEHOLDER — ainda não confirmado
+  googleMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(
+      "R. Joaquim Murtinho, 1335 - Centro Sul, Cuiabá - MT, 78020-290"
+    ),
 
-  // PLACEHOLDER — usar até receber o dado real
-  yearsOfExperience: "[X anos de experiência]",
+  establishedYear: 1997,
+  authorizedInstallerOf: "Intercontrol",
 
   email: "", // PLACEHOLDER, caso exista
 
   seo: {
-    title: "Himperfilme | Insulfilm e Películas Automotivas",
+    title: "Himperfilme | Insulfilm Automotivo e Residencial em Cuiabá",
     description:
-      "Instalação profissional de películas automotivas para mais conforto térmico, proteção, privacidade e estilo para o seu veículo.",
+      "Instalação profissional de insulfilm automotivo e residencial em Cuiabá. Instalador autorizado Intercontrol desde 1997. Conforto térmico, proteção UV e privacidade.",
   },
 } as const;
 
