@@ -40,13 +40,30 @@ export const metadata: Metadata = {
   },
 };
 
+const THEME_INIT_SCRIPT = `
+  try {
+    var theme = localStorage.getItem('himperfilme-theme');
+    if (theme === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  } catch (e) {}
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${oswald.variable} ${manrope.variable}`}>
+    <html
+      lang="pt-BR"
+      className={`${oswald.variable} ${manrope.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Aplica o tema salvo antes do primeiro paint, evitando flash de tema errado */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="antialiased bg-brand-black text-brand-white">
         {children}
       </body>

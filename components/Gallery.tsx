@@ -87,7 +87,7 @@ export default function Gallery() {
               key={item.id}
               type="button"
               onClick={() => setOpenIndex(index)}
-              className="group relative aspect-square overflow-hidden rounded-sm border border-white/5 bg-brand-black-soft transition-colors hover:border-brand-red/40"
+              className="group relative aspect-square overflow-hidden rounded-sm border border-brand-hairline bg-brand-black-soft transition-colors hover:border-brand-red/40"
             >
               <Image
                 src={item.src}
@@ -131,7 +131,7 @@ export default function Gallery() {
             type="button"
             onClick={close}
             aria-label="Fechar"
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-brand-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
           >
             <X size={22} />
           </button>
@@ -143,14 +143,14 @@ export default function Gallery() {
               showPrev();
             }}
             aria-label="Foto anterior"
-            className="absolute left-2 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-brand-white transition-colors hover:bg-white/20 sm:left-6"
+            className="absolute left-2 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
           >
             <ChevronLeft size={22} />
           </button>
 
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative aspect-[4/5] w-full max-w-xl overflow-hidden rounded-sm border border-white/10 bg-brand-black-soft sm:aspect-video"
+            className="relative aspect-[4/5] w-full max-w-xl overflow-hidden rounded-sm border border-white/10 bg-[#151515] sm:aspect-video"
           >
             <Image
               src={GALLERY_ITEMS[openIndex].src}
@@ -168,7 +168,7 @@ export default function Gallery() {
               showNext();
             }}
             aria-label="Próxima foto"
-            className="absolute right-2 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-brand-white transition-colors hover:bg-white/20 sm:right-6"
+            className="absolute right-2 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
           >
             <ChevronRight size={22} />
           </button>

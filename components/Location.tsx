@@ -9,7 +9,7 @@ export default function Location() {
         <SectionHeading eyebrow="Onde estamos" title="Localização" />
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div className="flex items-start gap-4 rounded-sm border border-white/5 bg-brand-black p-6">
+          <div className="flex items-start gap-4 rounded-sm border border-brand-hairline bg-brand-black p-6">
             <MapPin size={22} className="mt-0.5 shrink-0 text-brand-red" />
             <div>
               <p className="font-display text-base font-semibold uppercase tracking-wide text-brand-white">
@@ -21,7 +21,7 @@ export default function Location() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 rounded-sm border border-white/5 bg-brand-black p-6">
+          <div className="flex items-start gap-4 rounded-sm border border-brand-hairline bg-brand-black p-6">
             <Clock size={22} className="mt-0.5 shrink-0 text-brand-red" />
             <div>
               <p className="font-display text-base font-semibold uppercase tracking-wide text-brand-white">
@@ -38,13 +38,13 @@ export default function Location() {
           href={siteConfig.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-sm bg-brand-red px-6 py-3.5 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
+          className="mt-6 inline-flex items-center gap-2 rounded-sm bg-brand-red px-6 py-3.5 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
         >
           <Navigation size={18} />
           Ver no Google Maps
         </a>
 
-        <div className="mt-8 overflow-hidden rounded-sm border border-white/10">
+        <div className="mt-8 overflow-hidden rounded-sm border border-brand-hairline">
           <iframe
             src={`https://www.google.com/maps?q=${encodeURIComponent(
               siteConfig.address

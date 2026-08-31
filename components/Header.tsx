@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { getWhatsAppLink } from "@/lib/utils";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
@@ -43,7 +44,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || menuOpen
-          ? "bg-brand-black/95 backdrop-blur-sm border-b border-white/5"
+          ? "bg-brand-black/95 backdrop-blur-sm border-b border-brand-hairline"
           : "bg-transparent"
       }`}
     >
@@ -81,26 +82,30 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
           <a
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-sm bg-brand-red px-5 py-2.5 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
+            className="rounded-sm bg-brand-red px-5 py-2.5 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
           >
             Orçamento
           </a>
         </nav>
 
-        {/* Botão hambúrguer mobile */}
-        <button
-          type="button"
-          onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center text-brand-white md:hidden"
-          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        {/* Ações mobile: tema + hambúrguer */}
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setMenuOpen((v) => !v)}
+            className="flex h-10 w-10 items-center justify-center text-brand-white"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
       {/* Menu mobile */}
@@ -109,7 +114,7 @@ export default function Header() {
           menuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 border-t border-white/5 bg-brand-black px-5 py-4">
+        <nav className="flex flex-col gap-1 border-t border-brand-hairline bg-brand-black px-5 py-4">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -118,7 +123,7 @@ export default function Header() {
                 e.preventDefault();
                 handleNavClick(link.href);
               }}
-              className="rounded-sm px-2 py-3 font-sans text-base font-medium uppercase tracking-wide text-brand-gray transition-colors hover:bg-white/5 hover:text-brand-white"
+              className="rounded-sm px-2 py-3 font-sans text-base font-medium uppercase tracking-wide text-brand-gray transition-colors hover:bg-brand-chip hover:text-brand-white"
             >
               {link.label}
             </a>
@@ -127,7 +132,7 @@ export default function Header() {
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 rounded-sm bg-brand-red px-5 py-3 text-center font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
+            className="mt-2 rounded-sm bg-brand-red px-5 py-3 text-center font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
           >
             Solicitar orçamento
           </a>
