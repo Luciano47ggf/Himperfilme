@@ -19,7 +19,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Alternar entre modo claro e escuro"
-      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-white/40"
+      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-hairline text-brand-white transition-colors hover:border-brand-hairline-hover"
     >
       {/* A troca de ícone é feita via CSS, olhando a classe .light no <html> —
           evita mismatch de hidratação (servidor não sabe a preferência salva) */}
