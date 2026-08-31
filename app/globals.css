@@ -7,31 +7,6 @@
   --color-red-bright: #ff1e1e;
   --color-white: #ffffff;
   --color-gray: #b8b8b8;
-
-  /* Bordas e "chips" translúcidos — adaptam de tema sem precisar trocar cada componente */
-  --color-hairline: rgba(255, 255, 255, 0.08);
-  --color-hairline-hover: rgba(255, 255, 255, 0.35);
-  --color-chip: rgba(255, 255, 255, 0.1);
-  --color-chip-hover: rgba(255, 255, 255, 0.2);
-
-  color-scheme: dark;
-}
-
-/* Modo claro — ativado via classe .light no <html> (ver ThemeToggle.tsx) */
-:root.light {
-  --color-black: #f4f4f3;
-  --color-black-soft: #ffffff;
-  --color-red: #d20a0a;
-  --color-red-bright: #e21414;
-  --color-white: #0a0a0a;
-  --color-gray: #555555;
-
-  --color-hairline: rgba(0, 0, 0, 0.1);
-  --color-hairline-hover: rgba(0, 0, 0, 0.35);
-  --color-chip: rgba(0, 0, 0, 0.05);
-  --color-chip-hover: rgba(0, 0, 0, 0.1);
-
-  color-scheme: light;
 }
 
 @theme inline {
@@ -42,10 +17,6 @@
   --color-brand-red-bright: var(--color-red-bright);
   --color-brand-white: var(--color-white);
   --color-brand-gray: var(--color-gray);
-  --color-brand-hairline: var(--color-hairline);
-  --color-brand-hairline-hover: var(--color-hairline-hover);
-  --color-brand-chip: var(--color-chip);
-  --color-brand-chip-hover: var(--color-chip-hover);
 
   /* Tipografia */
   --font-display: var(--font-oswald);
@@ -60,12 +31,11 @@ body {
   background: var(--color-black);
   color: var(--color-white);
   font-family: var(--font-sans);
-  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
   background: var(--color-red);
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 /* Elemento de assinatura: corte diagonal (referência ao corte de película) */
