@@ -15,6 +15,11 @@ const NAV_LINKS = [
   { label: "Contato", href: "#contato" },
 ];
 
+/**
+ * O Header fica sobreposto à foto escura do Hero (transparente no topo),
+ * então mantém sempre a mesma aparência escura, independente do tema
+ * claro/escuro escolhido — assim ele continua legível em cima da foto.
+ */
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +49,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || menuOpen
-          ? "bg-brand-black/95 backdrop-blur-sm border-b border-brand-hairline"
+          ? "bg-black/95 backdrop-blur-sm border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -77,7 +82,7 @@ export default function Header() {
                 e.preventDefault();
                 handleNavClick(link.href);
               }}
-              className="font-sans text-sm font-medium uppercase tracking-wide text-brand-gray transition-colors hover:text-brand-white"
+              className="font-sans text-sm font-medium uppercase tracking-wide text-gray-300 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -99,7 +104,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center text-brand-white"
+            className="flex h-10 w-10 items-center justify-center text-white"
             aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={menuOpen}
           >
@@ -114,7 +119,7 @@ export default function Header() {
           menuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 border-t border-brand-hairline bg-brand-black px-5 py-4">
+        <nav className="flex flex-col gap-1 border-t border-white/10 bg-black px-5 py-4">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -123,7 +128,7 @@ export default function Header() {
                 e.preventDefault();
                 handleNavClick(link.href);
               }}
-              className="rounded-sm px-2 py-3 font-sans text-base font-medium uppercase tracking-wide text-brand-gray transition-colors hover:bg-brand-chip hover:text-brand-white"
+              className="rounded-sm px-2 py-3 font-sans text-base font-medium uppercase tracking-wide text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
             >
               {link.label}
             </a>
