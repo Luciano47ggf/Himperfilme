@@ -26,7 +26,7 @@ export const siteConfig = {
   city: "Cuiabá - MT",
   region: "Atendimento em Cuiabá e região",
   address: "R. Joaquim Murtinho, 1335 - Centro Sul, Cuiabá - MT, 78020-290",
-  workingHours: "[HORÁRIO DE ATENDIMENTO]", // PLACEHOLDER — ainda não confirmado
+  workingHours: "Seg a Sex: 7h30 às 17h · Sáb: 7h30 às 11h30",
   googleMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(
