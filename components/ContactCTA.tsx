@@ -26,7 +26,7 @@ export default function ContactCTA() {
           href={getWhatsAppLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-9 inline-flex items-center justify-center rounded-sm bg-brand-red px-10 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
+          className="mt-9 inline-flex items-center justify-center rounded-sm bg-brand-red px-10 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
         >
           Chamar no WhatsApp
         </a>

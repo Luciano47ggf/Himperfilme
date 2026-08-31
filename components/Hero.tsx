@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       {/* Overlay escuro adicional para garantir leitura do texto */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808]/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/50" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="max-w-2xl">
@@ -51,12 +51,12 @@ export default function Hero() {
             Insulfilm Automotivo e Residencial
           </p>
 
-          <h1 className="mt-6 font-display text-4xl font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-display text-4xl font-semibold uppercase leading-[1.05] tracking-tight text-brand-white sm:text-6xl lg:text-7xl">
             Proteção, conforto e{" "}
             <span className="text-brand-red">estilo</span> para o seu carro.
           </h1>
 
-          <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-gray-300 sm:text-lg">
+          <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-brand-gray sm:text-lg">
             Películas automotivas com instalação profissional, acabamento
             impecável e mais conforto para você e seu veículo.
           </p>
@@ -66,13 +66,13 @@ export default function Hero() {
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-sm bg-brand-red px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
+              className="inline-flex items-center justify-center rounded-sm bg-brand-red px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
             >
               Solicitar orçamento
             </a>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center rounded-sm border border-white/15 px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:border-white/40"
+              className="inline-flex items-center justify-center rounded-sm border border-white/15 px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:border-white/40"
             >
               Conhecer serviços
             </a>

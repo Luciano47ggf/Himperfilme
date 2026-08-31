@@ -22,7 +22,7 @@ export default function About() {
         </p>
 
         <div className="mx-auto mt-10 flex max-w-lg flex-col gap-4 sm:flex-row">
-          <div className="flex flex-1 items-start gap-3 rounded-sm border border-brand-hairline bg-brand-black p-4 text-left">
+          <div className="flex flex-1 items-start gap-3 rounded-sm border border-white/5 bg-brand-black p-4 text-left">
             <CalendarCheck size={22} className="mt-0.5 shrink-0 text-brand-red" />
             <div>
               <p className="font-display text-lg font-semibold text-brand-white">
@@ -34,7 +34,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex flex-1 items-start gap-3 rounded-sm border border-brand-hairline bg-brand-black p-4 text-left">
+          <div className="flex flex-1 items-start gap-3 rounded-sm border border-white/5 bg-brand-black p-4 text-left">
             <BadgeCheck size={22} className="mt-0.5 shrink-0 text-brand-red" />
             <div>
               <p className="font-display text-lg font-semibold text-brand-white">
