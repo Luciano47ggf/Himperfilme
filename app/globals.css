@@ -91,9 +91,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--color-red) 15%,
-    var(--color-red-bright) 50%,
-    var(--color-red) 85%,
+    #d20a0a 15%,
+    #ff1e1e 50%,
+    #d20a0a 85%,
     transparent 100%
   );
 }

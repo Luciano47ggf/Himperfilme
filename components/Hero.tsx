@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[100svh] items-center overflow-hidden bg-brand-black pt-16 sm:pt-20"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#080808] pt-16 sm:pt-20"
     >
       {/* Fundo: foto + overlays escuros para leitura do texto */}
       <div className="absolute inset-0">
@@ -47,13 +47,13 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="max-w-2xl">
-          <p className="film-edge inline-block pt-4 font-display text-xs font-semibold uppercase tracking-[0.35em] text-brand-red-bright sm:text-sm">
+          <p className="film-edge inline-block pt-4 font-display text-xs font-semibold uppercase tracking-[0.35em] text-[#ff1e1e] sm:text-sm">
             Insulfilm Automotivo e Residencial
           </p>
 
           <h1 className="mt-6 font-display text-4xl font-semibold uppercase leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Proteção, conforto e{" "}
-            <span className="text-brand-red">estilo</span> para o seu carro.
+            <span className="text-[#d20a0a]">estilo</span> para o seu carro.
           </h1>
 
           <p className="mt-6 max-w-lg font-sans text-base leading-relaxed text-gray-300 sm:text-lg">
@@ -81,7 +81,7 @@ export default function Hero() {
       </div>
 
       {/* Assinatura visual: corte diagonal na base da seção */}
-      <div className="absolute inset-x-0 bottom-0 h-10 bg-brand-black diagonal-cut-t sm:h-16" />
+      <div className="absolute inset-x-0 bottom-0 h-10 bg-[#080808] diagonal-cut-t sm:h-16" />
     </section>
   );
 }
