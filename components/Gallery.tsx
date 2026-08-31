@@ -1,20 +1,48 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Camera, X, ChevronLeft, ChevronRight, AtSign } from "lucide-react";
+import Image from "next/image";
+import { X, ChevronLeft, ChevronRight, AtSign } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import { siteConfig } from "@/data/site";
 
-/**
- * IMAGENS (pendente):
- * Substitua os placeholders abaixo por fotos reais das instalações assim que
- * estiverem disponíveis (ex: /public/images/gallery/trabalho-01.jpg) e troque
- * os blocos com o ícone de câmera por <Image src="..." fill className="object-cover" />.
- */
-const GALLERY_ITEMS = Array.from({ length: 6 }, (_, i) => ({
-  id: i + 1,
-  label: `Trabalho ${String(i + 1).padStart(2, "0")}`,
-}));
+const GALLERY_ITEMS = [
+  {
+    id: 1,
+    src: "/images/gallery/trabalho-01-huracan.jpg",
+    alt: "Instalação de insulfilm em Lamborghini Huracán",
+  },
+  {
+    id: 2,
+    src: "/images/gallery/trabalho-02-taos.jpg",
+    alt: "Instalação de insulfilm em Volkswagen Taos",
+  },
+  {
+    id: 3,
+    src: "/images/gallery/trabalho-03-polo.jpg",
+    alt: "Instalação de insulfilm em Volkswagen Polo",
+  },
+  {
+    id: 4,
+    src: "/images/gallery/trabalho-04-virtus.jpg",
+    alt: "Instalação de insulfilm em Volkswagen Virtus GTS",
+  },
+  {
+    id: 5,
+    src: "/images/gallery/trabalho-05-residencial-patio.jpg",
+    alt: "Insulfilm residencial em pátio com piscina",
+  },
+  {
+    id: 6,
+    src: "/images/gallery/trabalho-06-residencial-piscina.jpg",
+    alt: "Insulfilm residencial em portas de vidro na área da piscina",
+  },
+  {
+    id: 7,
+    src: "/images/gallery/trabalho-07-residencial-salao.jpg",
+    alt: "Insulfilm residencial em salão de jogos",
+  },
+];
 
 export default function Gallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -50,7 +78,7 @@ export default function Gallery() {
         <SectionHeading
           eyebrow="Nosso trabalho"
           title="Galeria"
-          description="Fotos reais das instalações serão adicionadas aqui em breve."
+          description="Trabalhos reais realizados pela Himperfilme, automotivo e residencial."
         />
 
         <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
@@ -61,16 +89,13 @@ export default function Gallery() {
               onClick={() => setOpenIndex(index)}
               className="group relative aspect-square overflow-hidden rounded-sm border border-white/5 bg-brand-black-soft transition-colors hover:border-brand-red/40"
             >
-              <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-[#1a1a1a] to-[#0c0c0c] transition-transform duration-300 group-hover:scale-105">
-                <Camera
-                  size={28}
-                  strokeWidth={1.5}
-                  className="text-brand-gray/40"
-                />
-                <span className="font-sans text-xs font-medium uppercase tracking-wide text-brand-gray/50">
-                  {item.label}
-                </span>
-              </div>
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
             </button>
           ))}
         </div>
@@ -125,12 +150,15 @@ export default function Gallery() {
 
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex aspect-square w-full max-w-xl flex-col items-center justify-center gap-3 rounded-sm border border-white/10 bg-brand-black-soft"
+            className="relative aspect-[4/5] w-full max-w-xl overflow-hidden rounded-sm border border-white/10 bg-brand-black-soft sm:aspect-video"
           >
-            <Camera size={44} strokeWidth={1.5} className="text-brand-gray/40" />
-            <span className="font-sans text-sm font-medium uppercase tracking-wide text-brand-gray/50">
-              {GALLERY_ITEMS[openIndex].label} — foto real em breve
-            </span>
+            <Image
+              src={GALLERY_ITEMS[openIndex].src}
+              alt={GALLERY_ITEMS[openIndex].alt}
+              fill
+              sizes="(max-width: 640px) 100vw, 640px"
+              className="object-contain"
+            />
           </div>
 
           <button

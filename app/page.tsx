@@ -3,10 +3,8 @@ import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import Differentials from "@/components/Differentials";
-import BeforeAfter from "@/components/BeforeAfter";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
@@ -21,10 +19,8 @@ export default function Home() {
         <Benefits />
         <Services />
         <Differentials />
-        <BeforeAfter />
         <Gallery />
         <About />
-        <Testimonials />
         <ContactCTA />
         <Location />
       </main>
