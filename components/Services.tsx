@@ -57,7 +57,7 @@ export default function Services() {
           {SERVICES.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="group flex flex-col rounded-sm border border-white/5 bg-brand-black p-6 transition-colors hover:border-brand-red/40 sm:p-8"
+              className="group flex flex-col rounded-sm border border-brand-hairline bg-brand-black p-6 transition-colors hover:border-brand-red/40 sm:p-8"
             >
               <Icon
                 size={28}
@@ -79,7 +79,7 @@ export default function Services() {
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-sm bg-brand-red px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-brand-white transition-colors hover:bg-brand-red-bright"
+            className="inline-flex items-center justify-center rounded-sm bg-brand-red px-8 py-4 font-sans text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-red-bright"
           >
             Fazer orçamento
           </a>

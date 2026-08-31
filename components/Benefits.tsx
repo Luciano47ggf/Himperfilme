@@ -38,7 +38,7 @@ export default function Benefits() {
           {BENEFITS.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="group rounded-sm border border-white/5 bg-brand-black-soft p-6 transition-colors hover:border-brand-red/40 sm:p-8"
+              className="group rounded-sm border border-brand-hairline bg-brand-black-soft p-6 transition-colors hover:border-brand-red/40 sm:p-8"
             >
               <Icon
                 size={30}
